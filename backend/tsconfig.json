@@ -1,0 +1,51 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./",
+    "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "NodeNext",
+    "moduleResolution":"nodenext",
+    // "target": "ES2022",
+    "target": "esnext",
+    "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true, //Helps debugging compiled JS
+    "declaration": true, //Generates .d.ts files
+    "declarationMap": true,
+    "esModuleInterop": true,  // it resloves the import method like using require or import
+    "forceConsistentCasingInFileNames": true, // strict for naming the file
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true, //Makes array/object indexing safer
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "noEmitOnError": true, //Doesn't generate JS if TypeScript has errors
+    // "jsx": "react-jsx",
+    // "verbatimModuleSyntax": true,
+    // "isolatedModules": true,
+    // "noUncheckedSideEffectImports": true,
+    // "moduleDetection": "force",
+    "skipLibCheck": true,  //Skip type checking of declaration files
+  },
+  "include": ["app.ts","server.ts","src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
